@@ -1,0 +1,97 @@
+/* int valor = min+rand() / (RAND_MAX/(max-min+1)+1); */
+
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv) {
+	
+	srand(time(NULL));
+	
+	char card[2], cards[13]={'As', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'K', 'Q', 'J'};
+	
+	int resp, cartas[2], carta;
+	
+	for(int i=0; i<2; i++){
+		carta=(rand()%13)+1;
+		switch(carta){
+			case 1 :{
+				card[i]=cards[0];
+				break;
+			}
+		
+			case 2 :{
+				card[i]=cards[1];
+				break;
+			}
+		
+			case 3 :{
+				card[i]=cards[2];
+				break;
+			}
+		
+			case 4 :{
+				card[i]=cards[3];
+				break;
+			}
+		
+			case 5 :{
+				card[i]=cards[4];
+				break;
+			}
+		
+			case 6 :{
+				card[i]=cards[5];
+				break;
+			}
+		
+			case 7 :{
+				card[i]=cards[6];
+				break;
+
+			}
+		
+			case 8 :{
+				card[i]=cards[7];
+				break;
+			}
+
+			case 9 :{
+				card[i]=cards[8];
+				break;
+			}
+
+			case 10 :{
+				card[i]=cards[9];
+				break;
+			}
+
+			case 11 :{
+				card[i]=cards[10];
+				break;
+			}
+
+			case 12 :{
+				card[i]=cards[11];
+				break;
+			}
+
+			case 13 :{
+				card[i]=cards[12];
+				break;
+			}
+
+		}
+	
+	}
+	
+	printf("Tus cartas son: carta 1 = %c, carta 2 = %c", card[0], card[1]);
+	
+	/*if(suma < 21){
+		printf("Quieres una carta mas?, \n si: presiona 1");
+		scanf("%d", &resp);
+	}*/
+		
+	return 0;
+}
